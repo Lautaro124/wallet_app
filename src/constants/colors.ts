@@ -1,0 +1,8 @@
+export enum COLORS {
+  PRIMARY = '#000000',
+  SECONDARY = '#2B2A87',
+  TERTIARY = '#292929',
+  TEXT = '#FFFFFF',
+  TEXT_LABEL = '#EEEEEE',
+  TEXT_SECONDARY = '#031952',
+}
