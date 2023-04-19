@@ -14,6 +14,11 @@ const TEXT_UTILS_STYLES = StyleSheet.create({
     fontSize: 18,
     color: COLORS.TEXT_LABEL,
     opacity: 0.75
+  },
+  text: {
+    fontStyle: 'normal',
+    fontSize: 16,
+    color: COLORS.TEXT
   }
 })
 

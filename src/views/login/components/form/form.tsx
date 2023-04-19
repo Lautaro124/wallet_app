@@ -16,8 +16,11 @@ const Form = () => {
           label='Password'
           placeholder='Enter your password'
         />
-        <CustomButton title='Login' />
-      </View>
+        <View style={styles.buttonsContainer}>
+          <CustomButton title='Login' />
+          <CustomButton title='Register' />
+        </View>
+    </View>
   )
 }
 
