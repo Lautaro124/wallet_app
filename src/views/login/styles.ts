@@ -1,14 +1,14 @@
 import { StyleSheet } from 'react-native'
+import TEXT_UTILS_STYLES from '../../constants/texts'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: '100%'
   },
-  formContainer: {
-    flex: 3,
-    width: '100%',
-    paddingHorizontal: 13
+  header: {
+    ...TEXT_UTILS_STYLES.header,
+    marginBottom: 200
   }
 })
 

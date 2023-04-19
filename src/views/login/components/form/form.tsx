@@ -1,12 +1,12 @@
 import { View } from 'react-native'
 import React from 'react'
-import Input from '../../../components/input/input'
-import CustomButton from '../../../components/button/button'
-import styles from '../styles'
+import Input from '../../../../components/input/input'
+import CustomButton from '../../../../components/button/button'
+import styles from './style'
 
 const Form = () => {
   return (
-      <View style={styles.formContainer}>
+      <View style={styles.container}>
         <Input
           label='Email'
           placeholder='Enter your email'
