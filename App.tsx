@@ -1,23 +1,32 @@
-import { StyleSheet, View } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
 import Login from './src/views/login/login'
-import { COLORS } from './src/constants/colors'
 import { StatusBar } from 'expo-status-bar'
+import RootStack from './src/constants/rootStack'
+import { COLORS } from './src/constants/colors'
+import TEXT_UTILS_STYLES from './src/constants/texts'
 
 export default function App () {
   return (
-    <View style={styles.container}>
+    <NavigationContainer>
       <StatusBar style='auto' />
-      <Login />
-    </View>
+      <RootStack.Navigator
+        initialRouteName='Login'
+        screenOptions={{
+          headerStyle: {
+            height: 93,
+            backgroundColor: COLORS.PRIMARY
+          },
+          headerTitleAlign: 'center',
+          headerTintColor: COLORS.TEXT,
+          headerShadowVisible: false,
+          headerTitleStyle: TEXT_UTILS_STYLES.header
+        }}
+      >
+        <RootStack.Screen
+          name='Login'
+          component={Login}
+        />
+      </RootStack.Navigator>
+    </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 30,
-    backgroundColor: COLORS.PRIMARY,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})

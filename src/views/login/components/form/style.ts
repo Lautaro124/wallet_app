@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     width: '100%',
     height: 130,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    paddingHorizontal: 15
   }
 })
 
