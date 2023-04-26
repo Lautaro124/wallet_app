@@ -6,9 +6,9 @@ interface Props extends React.ComponentProps<typeof TouchableOpacity> {
   title: string
 }
 
-const CustomButton = ({ title }: Props) => {
+const CustomButton = ({ title, ...restOfProps }: Props) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} {...restOfProps}>
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   )

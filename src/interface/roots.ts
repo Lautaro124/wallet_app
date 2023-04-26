@@ -1,6 +1,13 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
+
+export enum RootName {
+  Dashboard = 'Dashboard',
+  Login = 'Login',
+  Register = 'Register',
+}
+
 export type RootStackParamList = {
-  Home: undefined
-  Login: undefined
-  Register: undefined
+  [RootName.Dashboard]: undefined
+  [RootName.Login]: undefined
+  [RootName.Register]: undefined
 }
