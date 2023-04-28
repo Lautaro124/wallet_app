@@ -20,7 +20,22 @@ const Form = () => {
       email,
       password
     })
-    if (error != null) Alert.alert(error.message)
+    if (error != null) {
+      Alert.alert(error.message)
+      return
+    }
+    navigation.navigate(RootName.Dashboard)
+  }
+
+  const createAcount = async () => {
+    const { error } = await supabase.auth.signUp({
+      email,
+      password
+    })
+    if (error != null) {
+      Alert.alert(error.message)
+      return
+    }
     navigation.navigate(RootName.Dashboard)
   }
 
@@ -36,6 +51,7 @@ const Form = () => {
           label='Password'
           placeholder='Enter your password'
           onChangeText={setPassword}
+          keyboardType='visible-password'
         />
         <View style={styles.buttonsContainer}>
           <CustomButton
@@ -44,7 +60,7 @@ const Form = () => {
           />
           <CustomButton
             title='Register'
-            onPress={ () => { navigation.navigate(RootName.Dashboard) }}
+            onPress={ () => { void createAcount() }}
           />
         </View>
     </View>
