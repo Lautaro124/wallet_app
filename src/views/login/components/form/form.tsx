@@ -59,7 +59,7 @@ const Form = () => {
             onPress={() => { void login() }}
           />
           <CustomButton
-            title='Register'
+            title='Create account'
             onPress={ () => { void createAcount() }}
           />
         </View>
